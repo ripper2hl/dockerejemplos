@@ -50,6 +50,8 @@ nvm install node
 
 curl -o- -L https://yarnpkg.com/install.sh | bash
 
+cd nodejs
+
 yarn install
 
 docker build . -t docker:nodejs
@@ -61,4 +63,14 @@ Abrimos la liga http://localhost:3000/
 ---
 ## Python :
 
-Para ejecutar el proyecto en python necesitamos instalar ... 
+Para ejecutar el proyecto en python solo debemos ejecutar los siguientes comandos:
+
+```bash
+cd python
+
+docker build . -t docker:python
+
+docker run -p 80:80 docker:python
+```
+
+Abrimos la liga http://localhost/
